@@ -4,7 +4,7 @@
 
 Declaring the variable n
 
-``scala
+```scala
 
 var n: int = 7
 
@@ -19,22 +19,21 @@ def fib1(n:int): int = {
       return fib1(n-1) + fib1(n-2)
     }
   }
-
-``
+```
 
 As it is a function we need to call it and pass the variable to it (this will happen in odd algorithms; the same for return):
 
-``scala
+```scala
 
 fib1(number)
 Returns: int = 13
 
-``
+```
 
 2.- Explicit Formula Version
 This algorithm uses the explicit formula for the fibonacci series, this formula is not as accurate as when using the conventional methods like cycles or recursion.
 
-``scala
+```scala
 
 def fib2(n:Double): Double = 
 	var p: Double = ((1 + scala.math.sqrt(5)) / 2)
@@ -50,12 +49,12 @@ def fib2(n:Double): Double =
 	}
 }
 
-``
+```
 
 3.- Iterative Version
 A for loop is created, the loop will do 3 things: first it will add (b + a) to the variable c, then it will give the value of b to the variable a and finally it will assign the value of c to the variable b. In the end it will return the result.
 
-``scala
+```scala
 
 Fibonacci Version 3:
 
@@ -73,12 +72,12 @@ return a
 
 }
 
-``
+```
 
 4.- Iterative Version: 2 variables
 We create a while loop, the loop will do if the value of k is less than n then the variable b will be assigned the value of the sum of b + a, the variable will be assigned the subtraction of ba and the variable k will increase + 1. In the end it will return the result.
 
-``scala
+```scala
 
 def fib4(n:int) : int = {
 	var a = 0
@@ -96,12 +95,12 @@ def fib4(n:int) : int = {
 	return a
 }
 
-``
+```
 
 5.- Iterative Version: Vector
 The cycle will be assigned to the vector in the current position (k), the vector will be assigned to the position k, the resulting sum from the last and penultimate position, will finally return the calculated result.
 
-``scala
+```scala
 
 Fibonacci Version 5:
 
@@ -122,11 +121,11 @@ def fib5(n:int): int = {
     }
   }
 
-``
+```
 
 6.- Divide and Overcome Version
 
-``scala
+```scala
 
 def fib6(n :int):Double={
     if(n<=0){
@@ -156,5 +155,4 @@ def fib6(n :int):Double={
 
 }
 fib6(10)
-
-``
+```
