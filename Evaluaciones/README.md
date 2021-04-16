@@ -87,7 +87,7 @@ The result is this:
 
 The result is this:
 
-![scala table](11b.png)
+![scala table](11b.PNG)
 
 11c.- What is the Pearson correlation between the "High" column and the "Volume" column?
 
@@ -97,7 +97,7 @@ df.select (corr ("High", "Volume")). show ()
 
 The result is this:
 
-![scala table](11c.png)
+![scala table](11c.PNG)
 
 11d.- What is the maximum of the "High" column per year?
 
@@ -107,7 +107,7 @@ valyeardf = df.withColumn ("Year", year (df ("Date"))) valyearmaxs = yeardf.sele
 
 The result is this:
 
-![scala table](11d.png)
+![scala table](11d.PNG)
 
 11e.- ¿Cuál es el promedio de columna "Close" para cada mes del calendario?
 
@@ -117,4 +117,4 @@ valmonthdf = df.withColumn("Month",month(df("Date")))valmonthavgs =monthdf.selec
 
 The result is this:
 
-![scala table](11e.png)
+![scala table](11e.PNG)
