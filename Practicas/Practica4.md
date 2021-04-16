@@ -1,88 +1,131 @@
-Practice 4 - Data frame
+### Practice 4 
+### Analyse the following code with your own words
 
-This practice was done in order to work and study what a dataframe 
-is and how we can apply the different functions that Scala offers us:
+### Code 1
+<div align="Justify">
+We have function listEvens that ir will accept the values of a list and those values will be of type Int.  We have String because it will print a message with the value of "n", we have a for loop to see each of the numebers in the list and each number will be put on the condition if with that the number will be diveded by 2 and if the remainder is 0 then the number is even and shows the message of its condition if not then the number is odd and it shows the message that is off. Followig the completion of the for loop, it returns the message Done.
+</div>
 
-PRACTICE 4 - Using 15 functions with a data frame
+``` scala 
+def listEvens(list:List[Int]): String ={
+    for(n <- list){
+        if(n%2==0){
+            println(s"$n is even")
+        }else{
+            println(s"$n is odd")
+        }
+    }
+    return "Done"
+}
+```
+<div align="Justify">
+The creation of the values l and l2 with each of them having
+a list, with l having 8 numbes and l2 with 6 numbers.
+The way to ingress the lists to the function
+</div>
 
-First the following lines of code were run before starting to use the 
-functions, each line of code contains a comment mentioning that each line 
-does.
-
-Import SparkSession
-
-```scala
-import org.apache.spark.sql.SparkSession
+``` scala
+val l = List(1,2,3,4,5,6,7,8)
+val l2 = List(4,3,22,55,7,8)
+listEvens(l)
+listEvens(l2)
 ```
 
-Create SparkSession
+## Code 2
+<div align="Justify">
+We have function afornutado that ir will receive lists of type Int an it will return type int values. We declare a variable res with the value of 0 Then it uses a for loop that will check all the numbers in the list, with if we see if the current number is equal to seven, if the number is not 7 then it will be added with the value of res and res value will becamo the result of the addition, on the contrary if the number is equal to 7 then the value of res is added with 14 and the value of res becomes the result of the addition. When the for loop finishes it will return current value of res.
+</div>
 
+``` scala
+def afortunado(list:List[Int]): Int={
+    var res=0
+    for(n <- list){
+        if(n==7){
+            res = res + 14
+        }else{
+            res = res + n
+        }
+    }
+    return res
+}
+``` 
+
+<div align="Justify">
+Creation of value af with a list of 3 numbers and the way the ingress the value to the function.
+</div>
+
+``` scala
+val af= List(1,7,7)
+println(afortunado(af))
+``` 
+
+## Code 3
+<div align="Justify">
+This is a function named "balance" which returns a list of integers and returns a Boolean.
+Declare a pair of variables "primera" and "segunda", the latter is assigned the value of the sum of the list.
+
+There is a for loop which is repeated from i = 0 to the length of the list, the "primera" variable is assigned its value plus the value of the list in position i and the "segunda" is assigned its minus value the value of the list in position i.
+
+If "primera" equals "segunda" then it returns a true. If not, until the cycle is finished, a flash will return.
+</div>
+
+``` scala
+def balance(list:List[Int]): Boolean={
+    var primera = 0
+    var segunda = 0
+
+    segunda = list.sum
+
+    for(i <- Range(0,list.length)){
+        primera = primera + list(i)
+        segunda = segunda - list(i)
+
+        if(primera == segunda){
+            return true
+        }
+    }
+    return false 
+}
+``` 
+
+<div aling = "Justify">
+Here only the three lists are declared
+</div>
+
+``` scala
+val bl = List(3,2,1)
+val bl2 = List(2,3,3,2)
+val bl3 = List(10,30,90)
+``` 
+
+Here the "balance" function is applied to each of the lists
+ 
 ```scala
-val spark = SparkSession.builder().appName("MiApp").master("local").getOrCreate()
+balance(bl)
+balance(bl2)
+balance(bl3)
+``` 
+
+## Code 4
+<div align= "Justify">
+We have a function called "palindromo" which returns a value called "palabra" which is a string, this function will return a boolean.
+It will only return true if the String is written the same from left to right as from left to right.
+
+``` scala
+def palindromo(palabra:String):Boolean ={
+    return (palabra == palabra.reverse)
+}
 ```
-
-Import SparkImplicits 
-
-```scala
-import spark.implicits._
-```
-
-Load dataframe
-This data frame is a text file that contains an entire dataset, so this line of code takes the path to run it in the console.
-
-```scala
-val dataf = spark.read.csv("C:/Users/Admin/Documents/9no Semestre/Datos Masivos/Practicas/CitiGroup2006_2008")
-```
-
-FUNCTIONS 
-
-Below are 15 functions with an explanation that each function applied in the data frame created above.
-
-```scala
-//FUNCION #1
-dataf.show() --> //This function show us the data frame. 
-
-//FUNCTION #2
-dataf.columns --> //This function shows the names of the columns created/existing in the data frame.
-
-//FUNCTION #3
-dataf.printSchema --> //This function shows the name of each column with its data type.
-
-//FUNCTION #4
-dataf.select("_c0","_c5").show() --> //This function shows the columns we select.
-
-//FUNCTION #5 
-val table = dataf.filter($"_c5">2000000)
-table.show()  --> //This function creates a filter in the data frame using some condition. In this case, a filter was used in column _c5 where data greater than 2,000,000 are filtered
-
-//FUNCTION #6
-dataf.count() --> //This function tells us how many elements the data frame has.
-
-//FUNCTION #7
-dataf.head(3) --> //Displays the data sets, the number determines up to which data set of the data frame you want to display.
-
-//FUNCTION #8
-dataf.collect() --> //This function returns a vector containing all rows in the data frame.
-
-//FUNCTION #9
-dataf.describe("_c1").show() --> //This function displays the number of elements, mean, standard deviation, minimum, maximum data frame elements.
-
-//FUNCTION #10
-dataf.explain() --> //This function prints information about the data frame.
-
-//FUNCTION #11
-dataf.isEmpty --> //This function tells us if the data frame is empty. Returning a boolean value.
-
-//FUNCTION #12
-dataf.alias("$") --> //This function returns a new dataset with an alias set.
-
-//FUNCTION #13
-dataf.cube($"_c1",$"_c2").avg().show() --> //This function creates a multidimensional cube using specific columns.
-
-//FUNCTION #14
-dataf.inputFiles --> //Esta función retorna la información de la ruta de donde se ubica el dataset.
-
-//FUNCTION #15
-dataf.dtypes --> //Returns the column names and their data type, all in a vector.
-
-```
+The three words "OSO" "ANNA" and "JUAN" are declared.
+``` scala
+val palabra = "OSO"
+val palabra2 = "ANNA"
+val palabra3 = "JUAN"
+``` 
+The value of the function is printed depending on the one of the "words" that is inserted.
+``` scala
+println(palindromo(palabra))
+println(palindromo(palabra2))
+println(palindromo(palabra3))
+``` 
+</div>
