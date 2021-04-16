@@ -77,7 +77,7 @@ df.filter ($ "Close" <600) .count ()
 ```
 The result is this:
 
-![scala table](1.png)
+![scala table](1.PNG)
 
 11b.- What percentage of the time was the column "High" greater than $ 500?
 
