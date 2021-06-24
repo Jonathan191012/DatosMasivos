@@ -89,3 +89,6 @@ In addition, it is compatible with the Java virtual machine, this means that you
 # 4.- Results 
 
 ![alt text](Evaluacion/svm.PNG)
+
+
+![alt text](Evaluacion/DDecision Tree.PNG)
