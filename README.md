@@ -22,10 +22,6 @@ JONATHAN GONZALEZ ROSALES 17210570
 
 ## [1.- Introduction](#Introduction)
 ## [2.- Develoment](#Develoment)
-   #### [SVM](#SVM)
-   #### [Decision Tree](#DecisionTree)
-   #### [Logistic Regression](#LogisticRegression)
-   #### [Multilayer Perceptron](#MultilayerPerceptron)
 ## [3.- Implementation](#Implementation)
 ## [4.- Results](#Results)
 ## [5.- Conclusion](#Conclusion)
@@ -92,3 +88,18 @@ In addition, it is compatible with the Java virtual machine, this means that you
 
 
 ![alt text](Evaluacion/DecisionTree.PNG)
+
+
+# 5.- Conclusion
+
+When visualizing the comparisons that were made to the algorithms, we think that the results are very similar and that it is better to use the algorithm with which you are most familiar. In the same way, each algorithm can work better according to the situation that arises. But this practice served to see which is more accurate, what is its margin of error, among other things.
+
+Based on the results obtained with the runs of each of the algorithms, it can be seen that the one that consumed the least memory was the Decision Tree algorithm, however it was the longest to execute, since it took almost twice as long as the others algorithms.
+
+# 6.- References 
+
+Marketing KeepCoding. (2020, 15 julio). ¿Cómo usar Spark con Scala para Big Data? KeepCoding. https://keepcoding.io/blog/usar-spark-con-scala/
+
+Multilayer Neural Networks. Multilayer Perceptron. Retrieved from https://www.inf.utfsm.cl/~hallende/bajadas/Redes/redes%20de%20Multicapa.pdf
+
+
