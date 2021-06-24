@@ -91,4 +91,4 @@ In addition, it is compatible with the Java virtual machine, this means that you
 ![alt text](Evaluacion/svm.PNG)
 
 
-![alt text](Evaluacion/Decision Tree.PNG)
+![alt text](Evaluacion/Decision_Tree.PNG)
