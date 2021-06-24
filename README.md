@@ -16,6 +16,7 @@ Final Project
 
 ALUMNOS:                        
 JONATHAN GONZALEZ ROSALES 17210570
+NAVARRO SANCHEZ GERMAN ANDRES 16210278
 
 
 # Index
@@ -61,6 +62,24 @@ A decision tree is a prediction model whose main objective is inductive learning
 
 Building the tree begins by generating its root node, choosing a test attribute, and dividing the training set into two or more subsets; a new node is generated for each partition and so on. When there are objects of more than one class in a node, an internal node is generated; when it contains objects of only one class, a sheet is formed that is assigned the label of the class. In the second stage of the algorithm each new object is classified by the built tree; then the tree is traversed from the root node to a leaf, from which the membership of the object to some class is determined. The path to follow in the tree is determined by the decisions made at each internal node, according to the test attribute present in it.
 
+### 2.3 Logistic Regression
+
+Logistic regression is a statistical model that in its basic form uses a logistic function to model a binary dependent variable, although many more complex extensions exist. In regression analysis, logistic regression (or logit regression) is estimating the parameters of a logistic model (a form of binary regression).
+
+Mathematically, a binary logistic model has a dependent variable with two possible values, such as pass/fail which is represented by an indicator variable, where the two values are labeled "0" and "1". In the logistic model, the log-odds (the logarithm of the odds) for the value labeled "1" is a linear combination of one or more independent variables ("predictors"); the independent variables can each be a binary variable (two classes, coded by an indicator variable) or a continuous variable (any real value). The corresponding probability of the value labeled "1" can vary between 0 (certainly the value "0") and 1 (certainly the value "1"), hence the labeling; the function that converts log-odds to probability is the logistic function, hence the name.
+
+The unit of measurement for the log-odds scale is called a logit, from logistic unit, hence the alternative names. Analogous models with a different sigmoid function instead of the logistic function can also be used, such as the probit model; the defining characteristic of the logistic model is that increasing one of the independent variables multiplicatively scales the odds of the given outcome at a constant rate, with each independent variable having its own parameter; for a binary dependent variable this generalizes the odds ratio.
+
+### 2.4 Multilayer Perceptron
+
+The perceptron is very useful for classifying data sets that are linearly separable. They run into serious limitations with data sets that do not fit this pattern as discovered with the XOR problem. The XOR problem shows that for any four-point classification there is a set that is not linearly separable.
+
+MultiLayer Perceptron (MLP) breaks this restriction and classifies data sets that are not linearly separable. They do this by using a more robust and complex architecture to learn classification and regression models for difficult data sets.
+
+The multilayer perceptron classifier (MLPC) is a classifier based on the feedforward artificial neural network, which means that data is transmitted from the input layer to the output layer in the forward direction. MLPC consists of multiple layers of nodes. Each layer is fully connected to the next layer in the network. The nodes in the input layer represent the input data. All other nodes map inputs to outputs by linearly combining the inputs with the node weights w and bias b and applying an activation function.
+
+The multilayer perceptron (MLP) is a complement to the forward neural network. It consists of three types of layers: the input layer, the output layer, and the hidden layer. The input layer receives the input signal to be processed. The required task, such as prediction and classification, is performed by the output layer. An arbitrary number of hidden layers that are placed between the input layer and the output layer are the true computational engine of MLP. Similar to a feed-forward network in an MLP, data flows in the forward direction from the input layer to the output layer. Neurons in the MLP are trained with the backpropagation learning algorithm. MLPs are designed to approximate any continuous function and can solve problems that are not linearly separable. The main MLP use cases are pattern classification, recognition, prediction, and approximation.
+
 # 3.- Implementation <a name="Implementation"></a>
  
 #### What is Spark?
@@ -89,6 +108,33 @@ In addition, it is compatible with the Java virtual machine, this means that you
 
 ![alt text](Evaluacion/DecisionTree.PNG)
 
+**Logistic Regression**
+
+When performing the interactions of this model, it gave us the same results, the only thing that changes is depending on the equipment used to run the model.
+
+```scala
+Coefficients:[2.1953717210865443E-5, -0.0039087241148942735,0.0020207318126466336,0.0013950274211932889,0.04274086623441127]
+Interceptions: -2.706584067945768
+With an efficiency of:
+Degree of accuracy = 0.8849252856724289 `88.49%`
+```
+
+```scala
+Coefficients:[2.1295060967543102E-5, -0.0032248638711286446,0.002004245563577638,0.0014137466827612378,0.0371939132948556]
+Interceptions: -2.695580402935833
+With an efficiency of:
+Degree of accuracy = 0.8886545454545455 `88.87%`
+```
+
+**Multilayer Perceptron**
+
+This only gave us the percentage of precision, during the first tests the answer was
+
+```scala
+0.8835474819081377 `` (88.35%) ``
+while in the other tests it was
+0.8829225352112676 `` (88.29%) `
+```
 
 # 5.- Conclusion <a name="Conclusion"></a>
 
@@ -102,4 +148,6 @@ Marketing KeepCoding. (2020, 15 julio). ¿Cómo usar Spark con Scala para Big Da
 
 Multilayer Neural Networks. Multilayer Perceptron. Retrieved from https://www.inf.utfsm.cl/~hallende/bajadas/Redes/redes%20de%20Multicapa.pdf
 
+S. Abirami, P. Chitra. (2020). Multilayer Perceptron. junio 23, 2020, de sciencedirect Sitio web: https://www.sciencedirect.com/topics/computer-science/multilayer-perceptron
 
+What is Logistic Regression? - Statistics Solutions. (2021). Retrieved 23 June 2021, from https://www.statisticssolutions.com/free-resources/directory-of-statistical-analyses/what-is-logistic-regression/
