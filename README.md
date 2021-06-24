@@ -29,14 +29,14 @@ JONATHAN GONZALEZ ROSALES 17210570
 
 
 
-# 1.- Introduction
+# 1.- Introduction <a name="Introduction"></a>
 
 Machine learning is an application of artificial intelligence (AI) that provides systems the ability to automatically learn and improve from experience without being explicitly programmed. Machine learning focuses on the development of computer programs that can access data and use it to learn for themselves.
 The process of learning begins with observations or data, such as examples, direct experience, or instruction, in order to look for patterns in data and make better decisions in the future based on the examples that we provide. 
 
 There are different types of algorithms and these are applicable depending on the type of machine learning in which the algorithm will work. Among them there are the algorithms of: regression, Bayesian, grouping, neural networks, among others. Below we will see some machine learning algorithms and their implementation in a data set.
 
-# 2.- Develoment
+# 2.- Develoment <a name="Develoment"></a>
 
 ### 2.1 Support Vector Machine
 
@@ -61,8 +61,8 @@ A decision tree is a prediction model whose main objective is inductive learning
 
 Building the tree begins by generating its root node, choosing a test attribute, and dividing the training set into two or more subsets; a new node is generated for each partition and so on. When there are objects of more than one class in a node, an internal node is generated; when it contains objects of only one class, a sheet is formed that is assigned the label of the class. In the second stage of the algorithm each new object is classified by the built tree; then the tree is traversed from the root node to a leaf, from which the membership of the object to some class is determined. The path to follow in the tree is determined by the decisions made at each internal node, according to the test attribute present in it.
 
-# 3.- Implementation
-
+# 3.- Implementation <a name="Implementation"></a>
+ 
 #### What is Spark?
 
 Spark is an open source platform widely used in the industry for the processing of large volumes of data and execution of intensive computation on them. A framework that offers great value transforming and analyzing relevant data that helps large companies make better business decisions.
@@ -82,7 +82,7 @@ It has less code to perform some functions compared to other languages. This is 
 In addition, it is compatible with the Java virtual machine, this means that you can reuse Java libraries in your Scala applications, you will have compatibility with Java code and you can benefit from a consolidated community in the programming scene.
 
 
-# 4.- Results 
+# 4.- Results <a name="Results"></a>
 
 ![alt text](Evaluacion/svm.PNG)
 
@@ -90,13 +90,13 @@ In addition, it is compatible with the Java virtual machine, this means that you
 ![alt text](Evaluacion/DecisionTree.PNG)
 
 
-# 5.- Conclusion
+# 5.- Conclusion <a name="Conclusion"></a>
 
 When visualizing the comparisons that were made to the algorithms, we think that the results are very similar and that it is better to use the algorithm with which you are most familiar. In the same way, each algorithm can work better according to the situation that arises. But this practice served to see which is more accurate, what is its margin of error, among other things.
 
 Based on the results obtained with the runs of each of the algorithms, it can be seen that the one that consumed the least memory was the Decision Tree algorithm, however it was the longest to execute, since it took almost twice as long as the others algorithms.
 
-# 6.- References 
+# 6.- References <a name="References"></a>
 
 Marketing KeepCoding. (2020, 15 julio). ¿Cómo usar Spark con Scala para Big Data? KeepCoding. https://keepcoding.io/blog/usar-spark-con-scala/
 
